@@ -121,7 +121,7 @@ export default function App() {
 
         <div className="relative z-10">
           <h2 className="saira-300 text-3xl sm:text-4xl font-extrabold mb-10 text-white">
-            Countdown to Our Big Day
+            Happily Ever After Starts In…
           </h2>
 
           {timeLeft ? (
@@ -167,10 +167,12 @@ export default function App() {
       >
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative z-10 max-w-xl mx-auto text-white">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="cutive-mono-regular text-3xl sm:text-4xl font-bold mb-4">
             📍 Wedding Location
           </h2>
-          <p className="text-lg sm:text-xl mb-4">Groom's Home</p>
+          <p className="cutive-mono-regular text-lg sm:text-xl mb-4">
+            Groom's Home
+          </p>
           <a
             href="https://maps.app.goo.gl/wpFyu6A1NfqNB5L67?g_st=aw"
             target="_blank"
@@ -193,7 +195,7 @@ export default function App() {
       >
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative z-10 text-center max-w-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white">
+          <h2 className="saira-300 text-3xl sm:text-4xl font-bold mb-8 text-white">
             Will You Join Our Celebration?
           </h2>
 
@@ -207,13 +209,13 @@ export default function App() {
             <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
               <button
                 onClick={() => handleRsvp("yes")}
-                className="cutive-mono-regular px-6 py-3 rounded-full bg-green-400 text-white shadow hover:bg-green-500 transition"
+                className="cutive-mono-regular px-6 py-3 rounded-full bg-green-300 text-black shadow hover:bg-green-400 transition"
               >
                 Yes, I’ll be there!
               </button>
               <button
                 onClick={() => handleRsvp("love")}
-                className="cutive-mono-regular px-6 py-3 rounded-full bg-blue-400 text-white shadow hover:bg-blue-500 transition"
+                className="cutive-mono-regular px-6 py-3 rounded-full bg-blue-300 text-black font-extrabold shadow hover:bg-blue-400 transition"
               >
                 ❤️ Warm wishes across the miles
               </button>
@@ -223,7 +225,7 @@ export default function App() {
       </section>
 
       {/* 9️⃣ Footer */}
-      <footer className="py-6 text-center relative bg-blue-400">
+      <footer className="py-6 text-center relative bg-blue-300">
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="relative z-10 text-white">
           <p className="cutive-mono-regular text-base sm:text-lg font-semibold">
