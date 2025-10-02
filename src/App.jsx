@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import photo1 from "./photos/photo1.png";
 import love4 from "./photos/loveback4.jpg";
 import song from "./photos/song.mpeg";
+import love1 from "./photos/love1.jpg";
+import love2 from "./photos/love2.jpg";
+import love3 from "./photos/love3.jpg";
 
 // ⏳ Countdown hook
 function useCountdown(targetDate) {
@@ -41,7 +44,7 @@ export default function App() {
   const timeLeft = useCountdown(weddingDate);
 
   // 🎵 Music state (initially ON)
-  const [musicOn, setMusicOn] = useState(true);
+  const [musicOn, setMusicOn] = useState(false);
   const [rsvp, setRsvp] = useState(null);
 
   const handleRsvp = (choice) => setRsvp(choice);
@@ -82,7 +85,7 @@ export default function App() {
             We Are Getting Married💍!
           </h1>
           <h2 className="text-2xl sm:text-3xl md:text-4xl mb-2 font-semibold text-white">
-            Kavi ❤️ Hari
+            Hari ❤️ Kavi
           </h2>
           <p className="cutive-mono-regular text-lg sm:text-xl md:text-2xl animate-pulse text-white">
             24th October 2025
@@ -109,7 +112,7 @@ export default function App() {
       <section
         className="py-16 text-center px-4 relative"
         style={{
-          backgroundImage: `url(${back4})`,
+          backgroundImage: `url(${love1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -117,7 +120,7 @@ export default function App() {
         <div className="absolute inset-0 bg-black opacity-20"></div>
 
         <div className="relative z-10">
-          <h2 className="saira-300 text-3xl sm:text-4xl font-extrabold mb-10 text-black">
+          <h2 className="saira-300 text-3xl sm:text-4xl font-extrabold mb-10 text-white">
             Countdown to Our Big Day
           </h2>
 
@@ -154,9 +157,16 @@ export default function App() {
       </section>
 
       {/* 3️⃣ Wedding Location */}
-      <section className="py-16 text-center px-4 relative bg-blue-200">
+      <section
+        className="py-16 text-center px-4 relative bg-blue-200"
+        style={{
+          backgroundImage: `url(${love2})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative z-10 max-w-xl mx-auto text-black">
+        <div className="relative z-10 max-w-xl mx-auto text-white">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             📍 Wedding Location
           </h2>
@@ -173,15 +183,22 @@ export default function App() {
       </section>
 
       {/* 7️⃣ RSVP */}
-      <section className="py-16 px-4 relative">
+      <section
+        className="py-16 px-4 relative"
+        style={{
+          backgroundImage: `url(${love3})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative z-10 text-center max-w-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-black">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white">
             Will You Join Our Celebration?
           </h2>
 
           {rsvp ? (
-            <div className="text-black text-xl sm:text-2xl font-semibold bg-amber-300">
+            <div className="inline-block px-6 py-3 text-black text-xl sm:text-2xl font-semibold bg-amber-300 rounded-full shadow-md">
               {rsvp === "yes"
                 ? "🎉 Thank you! We can't wait to celebrate with you! 💖"
                 : "💌 Thank you for sending your love! We'll miss you at the event 😇"}
@@ -190,13 +207,13 @@ export default function App() {
             <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
               <button
                 onClick={() => handleRsvp("yes")}
-                className="px-6 py-3 rounded-full bg-green-400 text-white shadow hover:bg-green-500 transition"
+                className="cutive-mono-regular px-6 py-3 rounded-full bg-green-400 text-white shadow hover:bg-green-500 transition"
               >
                 Yes, I’ll be there!
               </button>
               <button
                 onClick={() => handleRsvp("love")}
-                className="px-6 py-3 rounded-full bg-blue-400 text-white shadow hover:bg-blue-500 transition"
+                className="cutive-mono-regular px-6 py-3 rounded-full bg-blue-400 text-white shadow hover:bg-blue-500 transition"
               >
                 ❤️ Warm wishes across the miles
               </button>
