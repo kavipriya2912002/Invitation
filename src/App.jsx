@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import photo1 from "./photos/photo1.jpeg";
+import photo1 from "./photos/photo1.png";
 import love4 from "./photos/loveback4.jpg";
 import song from "./photos/song.mpeg";
 
@@ -39,14 +39,13 @@ function useCountdown(targetDate) {
 export default function App() {
   const weddingDate = "2025-10-24T06:00:00";
   const timeLeft = useCountdown(weddingDate);
-  const [musicOn, setMusicOn] = useState(false);
-  const [rsvp, setRsvp] = useState(null); // null | "yes" | "love"
 
-  const handleRsvp = (choice) => {
-    setRsvp(choice);
-  };
+  // 🎵 Music state (initially ON)
+  const [musicOn, setMusicOn] = useState(true);
+  const [rsvp, setRsvp] = useState(null);
 
-  // Instead of random, assign fixed images
+  const handleRsvp = (choice) => setRsvp(choice);
+
   const heroBg = photo1;
   const back4 = love4;
 
@@ -55,7 +54,7 @@ export default function App() {
     const audio = document.getElementById("weddingAudio");
     if (musicOn) {
       audio.play().catch(() => {
-        console.log("Autoplay blocked; wait for user interaction");
+        console.log("Autoplay blocked; click button to play");
       });
     } else {
       audio.pause();
@@ -86,7 +85,7 @@ export default function App() {
             Kavi ❤️ Hari
           </h2>
           <p className="cutive-mono-regular text-lg sm:text-xl md:text-2xl animate-pulse text-white">
-            24th October 2024
+            24th October 2025
           </p>
           <button
             onClick={() =>
